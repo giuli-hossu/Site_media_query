@@ -1,0 +1,274 @@
+<!-- HOSSU GIULIA-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    
+    <!-- pentru iconite-->
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <style>
+        body
+        {
+            background-image: url('fundal2.jpg');
+        }
+        
+        .headerstyle
+        {
+            display: flex;
+            background-color: #F9F9F9;
+            border: 2px solid #8FBDD3;
+            padding: 15px;
+            font-size:25px;
+            color: #001D6E;
+        }
+        
+        .meniusecundarstyle
+        {
+            background-color: #C4DDFF;
+            border: 2px solid #8FBDD3;
+            padding: 10px;
+            font-size:20px;
+            text-align: center;
+        }
+        
+        .meniusecundarstyle a
+        {
+            padding: 30px;
+        }
+        
+        a:visited,a:link
+        {
+            text-decoration: none;
+            color: #1A132F;
+        }
+        
+        .fotterstyle
+        {
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #0E185F;
+            border: 2px solid #8FBDD3;
+            color: white;
+            font-size:15px;
+        }
+        .fotterstyle a
+        {
+            color: white;
+        }
+        
+        .copystyle
+        {
+            text-align: center;
+        }
+        
+        /* Slideshow container */
+        .slideshow-container
+        {
+            padding-top: 5px;
+            max-width: 900px;
+            position: relative;
+            margin: auto;
+            width: 60%;
+        }
+        
+        /* butoane Next & previous  */
+        .prev, .next
+        {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            transition: 0.6s ;
+        }
+        
+        /* pozitionare buton next */
+        .next
+        {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, adauga fundal la prev si next*/
+        .prev:hover, .next:hover
+        {
+            background-color: #0E185F;
+        }
+        
+        /* indicatori */
+        .dot
+        {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #0E185F;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active, .dot:hover {
+            border: 1px solid #0E185F;
+            background-color: #C4DDFF;
+        }
+        
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        
+        /*break point pentru MEDIA QUERIE*/
+        
+        /* dispozitive mici */
+        @media only screen and (min-width: 600px)
+        {
+            .headerstyle
+            {
+                background: #EFFFFD;
+            }
+            
+        }
+        
+       
+        
+        
+    
+    </style>
+
+</head>
+
+<!--
+Header:
+-- siglă (imagine)
+-- motto
+Elementele sunt poziționate în orice manieră, dar nu implicit.-->
+
+<header>
+    <div class="headerstyle">
+        <img src="giuli.jpeg" alt ="Giuli" width="70" height="125">
+        <h3><b>MOTTO: </b></h3>
+        <h3><i> Crede ca poti si vei fi deja la jumatatea drumului. (Theodore Roosevelt)</i></h3>
+    </div>
+</header>
+
+
+<body>
+<!--
+Meniu secundar
+- 3, 5 link-uri spre pagini externe, care se încarcă în ferestre noi (href=”url” target=”_blank”)
+- link-urile ocupă celule egale ca dimensiune și egal distanțate între ele; textele sunt centrate în fiecare
+celulă
+- link-urile sunt centrate în containerul în care sunt incluse
+-->
+<div class="meniusecundarstyle">
+    <b><a href="https://www.youtube.com/watch?v=2Ng_3LQ0ASU" target="_blank">Platou Sinaia</a></b>
+    <b><a href="https://booktes.com/bilet/plimbari-pe-mare-cu-corsarul-din-portul-turistic-mangalia" target="_blank">Barca pe Marea Neagra</a></b>
+    <b><a href="https://obiectiv-sm.ro/2019/06/14/istoria-gradinii-romei-cui-a-apartinut-parcul-si-ce-activitati-se-desfasurau-acolo-pana-sa-fie-parc-public/" target="_blank">Gradina Romei</a></b>
+    <b><a href="https://www.lifebeyondex.com/ro/post/things-to-do-in-hurghada-el-mina-mosque/" target="_blank">Moschee Hurghada</a></b>
+</div>
+
+
+
+<!--
+Zona centrală
+- v1: galerie de imagini
+- v2: informații (scrolabile sau nu) situate în 3 coloane adiacente; fiecare secțiune are un titlu și apoi
+încărcătură mokup
+-->
+
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="1.jpeg" alt="sinaia" style="width:100%;height: 350px">
+    </div>
+    
+    <div class="mySlides fade">
+        <img src="2.jpeg" alt="mare" style="width:100%;height: 350px">
+    </div>
+    
+    <div class="mySlides fade">
+        <img src="3.jpeg" alt="sm" style="width:100%;height:  350px ">
+    </div>
+    
+    <div class="mySlides fade">
+        <img src="4.jpeg" alt="egipt" style="width:100%;height:  350px ">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+
+</body>
+
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+<!--
+Footer
+- informații mockup de contact (telefon, email, FB)
+- fiecare set de informații conține o icoană (material design?) specifică + textul aferent
+- informații de copyright (&copy; numele autorului)
+- infomația apare centrat, în partea de jos a ecranului
+-->
+<footer>
+    <div class="fotterstyle">
+        <p><i class="material-icons" style="font-size:10px;">phone</i><b> Telefon: </b><i>0770666848</i> |
+        <i class="material-icons" style="font-size:10px;">email</i><b> Email: </b><i>ioana.hossu@yahoo.com</i> |
+        <i class="material-icons" style="font-size:10px;">photo_camera</i><b> Instagram: </b><i><a href="https://www.instagram.com/hossugiulia/">Hossu Giulia</a></i></p>
+        <p class="copystyle">&copy; Giulia Hossu</p>
+    </div>
+
+</footer>
+
+</html>
